@@ -1,0 +1,15 @@
+
+Deployment:
+  Replicas: 3
+  ContainerName: go-api-server
+  Image: saleh7127/go-api-server
+  ContainerPort: 7127
+
+Labels:
+  app: go-api-server
+
+service:
+  type: ClusterIP
+  port: 7127
+  TargetPort: 7127
+  protocol: TCP
